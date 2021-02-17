@@ -13,6 +13,7 @@ float dither4x4(vec2 position, float brightness, float bands)
 	float stepp = 1.0 / bands;
 	if(x < 8.0)
 	{
+		// this is not elegant, but neccessery due to Godots GLSL limitations on array usage
 		if (index == float(0))  { limit = 0.0625; }
 		if (index == float(1))  { limit = 0.5625; }
 		if (index == float(2))  { limit = 0.1875; }
